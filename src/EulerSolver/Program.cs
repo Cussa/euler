@@ -27,7 +27,6 @@ namespace EulerSolver
                 var result = problem.Execute();
                 Console.WriteLine("Problem: " + problemNumber);
                 Console.WriteLine("Result: " + result);
-                Console.ReadKey();
             }
             else
                 Console.WriteLine("Problem not found");
