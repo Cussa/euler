@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EulerSolver.Problems
 {
-    class _002 : IEulerProblem
+    class _002 : EulerProblem
     {
-        public string Execute()
+        public override string Execute()
         {
             var f1 = 1;
             var f2 = 2;
