@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace EulerSolver
 {
-    interface IEulerProblem
+    abstract class EulerProblem : IEulerProblem
     {
-        string Execute();
+        public DateTime Start { get; set; }
+
+        public EulerProblem()
+        {
+            Start = DateTime.Now;
+        }
+
+        public abstract string Execute();
     }
 }

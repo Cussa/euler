@@ -9,14 +9,14 @@ namespace EulerSolver
 {
     static class MagicActivator
     {
-        public static IEulerProblem MagicallyCreateInstance(string className)
+        public static EulerProblem MagicallyCreateInstance(string className)
         {
             var assembly = Assembly.GetExecutingAssembly();
             var type = assembly.GetTypes().FirstOrDefault(t => t.Name == className);
             if (type == null)
                 return null;
 
-            return (IEulerProblem)Activator.CreateInstance(type);
+            return (EulerProblem)Activator.CreateInstance(type);
         }
     }
 }

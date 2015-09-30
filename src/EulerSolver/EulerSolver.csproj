@@ -57,9 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EulerProblem.cs" />
+    <Compile Include="IEulerProblem.cs" />
     <Compile Include="MagicActivator.cs" />
     <Compile Include="Problems\001.cs" />
     <Compile Include="Problems\002.cs" />
+    <Compile Include="Problems\005.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
