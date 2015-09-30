@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EulerSolver
 {
-    abstract class EulerProblem : IEulerProblem
+    abstract class EulerProblem
     {
         public DateTime Start { get; set; }
         public decimal Result { get; set; }

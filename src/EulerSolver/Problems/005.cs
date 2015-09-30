@@ -33,10 +33,9 @@ namespace EulerSolver.Problems
                 }
 
                 searching = false;
-                ret = numberTest.ToString();
             }
 
-            Result = ret;
+            Result = numberTest;
         }
     }
 }
