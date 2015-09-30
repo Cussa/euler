@@ -8,7 +8,7 @@ namespace EulerSolver.Problems
 {
     class _005 : EulerProblem
     {
-        public override string Execute()
+        public override void Execute()
         {
             var ret = string.Empty;
             var searching = true;
@@ -36,7 +36,7 @@ namespace EulerSolver.Problems
                 ret = numberTest.ToString();
             }
 
-            return ret;
+            Result = ret;
         }
     }
 }

@@ -24,9 +24,9 @@ namespace EulerSolver
             var problem = MagicActivator.MagicallyCreateInstance("_" + problemNumber);
             if (problem != null)
             {
-                var result = problem.Execute();
+                problem.Execute();
                 Console.WriteLine("Problem: " + problemNumber);
-                Console.WriteLine("Result: " + result);
+                Console.WriteLine("Result: " + problem.Result);
                 Console.WriteLine("Time: " + DateTime.Now.Subtract(problem.Start));
             }
             else

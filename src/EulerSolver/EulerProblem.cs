@@ -9,12 +9,13 @@ namespace EulerSolver
     abstract class EulerProblem : IEulerProblem
     {
         public DateTime Start { get; set; }
+        public decimal Result { get; set; }
 
         public EulerProblem()
         {
             Start = DateTime.Now;
         }
 
-        public abstract string Execute();
+        public abstract void Execute();
     }
 }
