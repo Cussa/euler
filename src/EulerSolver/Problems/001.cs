@@ -8,7 +8,7 @@ namespace EulerSolver.Problems
 {
     class _001 : EulerProblem
     {
-        public override void Execute()
+        public override string Execute()
         {
             var sum = 0;
             for (int i = 0; i < 1000; i++)
@@ -17,7 +17,7 @@ namespace EulerSolver.Problems
                     sum += i;
             }
 
-            Result = sum;
+            return sum.ToString();
         }
     }
 }
