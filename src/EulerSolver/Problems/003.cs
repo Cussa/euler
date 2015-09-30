@@ -8,29 +8,33 @@ namespace EulerSolver.Problems
 {
     class _003 : EulerProblem
     {
-        private List<int> primes = new List<int>();
+        private List<long> primes = new List<long>();
+        private List<long> primesResult = new List<long>();
 
         public override void Execute()
         {
-            TestPrime(103);
+            TestPrime(9);
+            primes.Add(2);
+            long numberToTest = 600851475143;
+            for (long i = 3; i <= numberToTest; i += 2)
+            {
+                var p = TestPrime(i);
+                if (p > 0 && numberToTest % p == 0)
+                    primesResult.Add(p);
+            }
         }
 
-        private void TestPrime(int number)
+        private long TestPrime(long n)
         {
-            if (number == 2 && !primes.Any(x => x == 2))
+            var man = Math.Pow(3, n) % n;
+            var mn = 3 % n;
+            if (man == mn)
             {
-                primes.Add(number);
-                return;
+                primes.Add(n);
+                return n;
             }
 
-            var sqr = Math.Floor(Math.Sqrt(number));
-            var modResult = 0;
-            foreach (var item in primes)
-            {
-                modResult += number % item;
-            }
-            if (modResult == 0)
-                primes.Add(number);
+            return 0;
         }
     }
 }
